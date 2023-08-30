@@ -10,8 +10,8 @@ import "./globals.css";
 const font = Urbanist({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "HomeTegic",
-  description: "HomeTegic - The place for all your purchases.",
+  title: "ShopTegic",
+  description: "ShopTegic - The place for all your purchases.",
 };
 
 export default function RootLayout({
