@@ -10,12 +10,10 @@ import {
 const InvoiceData = (data: any) => {
   const orderId = "ed3f750f-4c8f-4fbe-9525-fa51d35edd3c"; //test
   const orders = data.data;
+
   const id = data.id;
-  function getorderid(order: any) {
-    return order.orderId === id;
-  }
-  var orderbyid = orders.find(getorderid);
-  console.log(orderbyid);
+
+  const orderbyid = orders.find((o: any) => o.id === id);
   const orderid = orderbyid.orderId;
   const email = orderbyid.email;
   const phone = orderbyid.phone;
@@ -56,7 +54,7 @@ const InvoiceData = (data: any) => {
                 </CardDescription>
               ) : (
                 <CardDescription className="font-bold">
-                  Is Paid : <span className="font-light">Payment</span>
+                  Is Paid : <span className="font-light">Payment Failed</span>
                 </CardDescription>
               )}
               <CardDescription className="font-bold">
