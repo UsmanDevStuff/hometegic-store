@@ -14,6 +14,7 @@ const InvoiceData = (data: any) => {
   const id = data.id;
 
   const orderbyid = orders.find((o: any) => o.id === id);
+
   const orderid = orderbyid.orderId;
   const email = orderbyid.email;
   const phone = orderbyid.phone;
@@ -49,7 +50,6 @@ const InvoiceData = (data: any) => {
               </CardDescription>
               {ispaid ? (
                 <CardDescription className="font-bold">
-                  Is Paid :{" "}
                   <span className="font-light">Payment Successful</span>
                 </CardDescription>
               ) : (

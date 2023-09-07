@@ -14,9 +14,7 @@ const ShowInvoice = (data: any) => {
 
   useEffect(() => {
     if (searchParams.get("success")) {
-      toast.success(
-        "Payment completed. Please download your invoice or check your email for details"
-      );
+      toast.success("Payment completed.");
       removeAll();
     }
 
