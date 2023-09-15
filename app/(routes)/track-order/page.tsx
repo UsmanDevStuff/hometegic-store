@@ -9,7 +9,7 @@ export const revalidate = 0;
 
 const TrackOrderPage = async () => {
   const orders = await getOrders();
-  const billboard = await getBillboard("8e798e06-02db-4371-b876-0c44b0b866c6");
+  const billboard = await getBillboard("272e03a8-27f6-45a5-ac53-5624743f7842");
   console.log(orders);
   return (
     <Container>
