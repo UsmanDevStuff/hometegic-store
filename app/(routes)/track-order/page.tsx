@@ -10,7 +10,6 @@ export const revalidate = 0;
 const TrackOrderPage = async () => {
   const orders = await getOrders();
   const billboard = await getBillboard("272e03a8-27f6-45a5-ac53-5624743f7842");
-  console.log(orders);
   return (
     <Container>
       <div className="space-y-10 pb-10">
