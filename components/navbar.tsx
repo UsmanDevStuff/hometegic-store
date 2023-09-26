@@ -4,6 +4,7 @@ import MainNav from "@/components/main-nav";
 import Container from "@/components/ui/container";
 import NavbarActions from "@/components/navbar-actions";
 import getCategories from "@/actions/get-categories";
+import Image from "next/image";
 
 const Navbar = async () => {
   const categories = await getCategories();
@@ -14,7 +15,8 @@ const Navbar = async () => {
         <Container>
           <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
             <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
-              <p className="font-bold text-xl">ShopTegic</p>
+              <Image src={"/st-l-c.png"} alt="logo" height={59} width={115} />
+              {/* <p className="font-extrabold text-2xl">EllisMart</p> */}
             </Link>
             {/* <MainNav data={categories} /> */}
             <NavbarActions />

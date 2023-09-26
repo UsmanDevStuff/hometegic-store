@@ -10,7 +10,6 @@ import {
 const InvoiceData = (data: any) => {
   const orderId = "ed3f750f-4c8f-4fbe-9525-fa51d35edd3c"; //test
   const orders = data.data;
-
   const id = data.id;
 
   const orderbyid = orders.find((o: any) => o.id === id);
@@ -21,7 +20,7 @@ const InvoiceData = (data: any) => {
   const address = orderbyid.address;
   const ispaid = orderbyid.isPaid;
   const orderstatus = orderbyid.orderStatus;
-
+  //className="grid justify-center"
   return (
     <div className="grid justify-center">
       <Container>
@@ -50,11 +49,12 @@ const InvoiceData = (data: any) => {
               </CardDescription>
               {ispaid ? (
                 <CardDescription className="font-bold">
+                  Is Paid :{" "}
                   <span className="font-light">Payment Successful</span>
                 </CardDescription>
               ) : (
                 <CardDescription className="font-bold">
-                  Is Paid : <span className="font-light">Payment Failed</span>
+                  Is Paid : <span className="font-light">Payment</span>
                 </CardDescription>
               )}
               <CardDescription className="font-bold">
