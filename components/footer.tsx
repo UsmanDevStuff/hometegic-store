@@ -39,14 +39,6 @@ const Footer = () => {
                       Contact
                     </a>
                   </li>
-                  <li>
-                    <a
-                      className="text-blueGray-600 hover:text-blueGray-800 block pb-2 text-sm"
-                      href="/track-order"
-                    >
-                      Track Your Order
-                    </a>
-                  </li>
                 </ul>
               </div>
               <div className="w-full lg:w-4/12 px-4 mt-3">
@@ -86,14 +78,14 @@ const Footer = () => {
                   <li>
                     <p className="text-blueGray-600 hover:text-blueGray-800  flex flex-row items-center pb-2 text-sm">
                       <Phone className="mr-1" size={15} />
-                      +13473336370
+                      +13022048354
                     </p>
                   </li>
                   <li>
                     <p className="text-blueGray-600 hover:text-blueGray-800  flex flex-row pb-2 text-sm">
                       <MapPin className="mr-1 mt-1" size={15} />
-                      5900 BALCONES DR STE 100
-                      <br /> AUSTIN TX 78731-4298
+                      919 North Market Str, Suite 950
+                      <br /> Wilmington DE 19801
                     </p>
                   </li>
                 </ul>
