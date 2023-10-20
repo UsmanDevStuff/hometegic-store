@@ -1,5 +1,6 @@
 import { Map } from "lucide-react";
 import { Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -7,6 +8,13 @@ const Footer = () => {
       <div className="container mx-auto px-4 mt-4">
         <div className="flex flex-wrap text-left lg:text-left">
           <div className="w-full lg:w-6/12 px-4 mt-7">
+            <Image
+              className="mb-4"
+              src={"/st-l-c.png"}
+              alt="footer-logo"
+              height={133}
+              width={164}
+            />
             <h4 className="text-2xl fonat-bold text-blueGray-700">
               Lets keep in touch!
             </h4>

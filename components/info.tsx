@@ -1,6 +1,6 @@
 "use client";
 
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, CreditCard } from "lucide-react";
 
 import Currency from "@/components/ui/currency";
 import Button from "@/components/ui/button";
@@ -16,6 +16,9 @@ const Info: React.FC<InfoProps> = ({ data }) => {
 
   const onAddToCart = () => {
     cart.addItem(data);
+  };
+  const buyNow = () => {
+    console.log("buy now clicked");
   };
 
   return (
@@ -43,6 +46,10 @@ const Info: React.FC<InfoProps> = ({ data }) => {
             <Button onClick={onAddToCart} className="flex items-center gap-x-2">
               Add To Cart
               <ShoppingCart size={20} />
+            </Button>
+            <Button onClick={buyNow} className="flex items-center gap-x-2">
+              Buy Now
+              <CreditCard size={20} />
             </Button>
           </div>
         </div>
