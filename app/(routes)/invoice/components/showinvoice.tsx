@@ -22,10 +22,10 @@ const ShowInvoice = (data: any) => {
   const orderbyid = orders.find((o: any) => o.id === id);
 
   // custom useState hook
-  const [isClient, setIsClient] = useState(false);
+  // const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    // setIsClient(true);
 
     if (searchParams.get("success")) {
       toast.success(
@@ -103,7 +103,7 @@ const ShowInvoice = (data: any) => {
           <div id="pdf">
             <div>
               <InvoiceData data={orders} id={id} />
-              <div className="grid justify-center">
+              {/* <div className="grid justify-center">
                 {isClient ? (
                   <PDFDownloadLink
                     className="bg-black rounded-full text-white px-4 py-1 mb-8"
@@ -115,7 +115,7 @@ const ShowInvoice = (data: any) => {
                     }
                   </PDFDownloadLink>
                 ) : null}
-              </div>
+              </div> */}
             </div>
           </div>
         ) : null}
