@@ -14,7 +14,7 @@ const InvoiceData = (data: any) => {
 
   const orderbyid = orders.find((o: any) => o.id === id);
 
-  const orderid = orderbyid.orderId;
+  const orderid = orderbyid.id;
   const email = orderbyid.email;
   const phone = orderbyid.phone;
   const address = orderbyid.address;

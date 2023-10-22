@@ -6,31 +6,42 @@ import Currency from "@/components/ui/currency";
 import Button from "@/components/ui/button";
 import { Product } from "@/types";
 import useCart from "@/hooks/use-cart";
+import axios from "axios";
 
 interface InfoProps {
   data: Product;
 }
 
 const Info: React.FC<InfoProps> = ({ data }) => {
+  const items = [{ id: data?.id }];
+
   const cart = useCart();
 
   const onAddToCart = () => {
     cart.addItem(data);
   };
-  const buyNow = () => {
-    console.log("buy now clicked");
+
+  const buyNow = async () => {
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
+      {
+        productIds: items.map((item) => item.id),
+      }
+    );
+
+    window.location = response.data.url;
   };
 
   return (
     <>
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
+        {/* <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
         <div className="mt-3 flex items-end justify-between">
           <p className="text-2xl text-gray-900">
             <Currency value={data?.price} />
           </p>
         </div>
-        <hr className="my-4" />
+        <hr className="my-4" /> */}
         <div className="flex flex-col gap-y-3">
           {/* <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-black">Size:</h3>
