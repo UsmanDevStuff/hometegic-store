@@ -29,9 +29,11 @@ const InvoiceData = (data: any) => {
             <CardHeader>
               <CardTitle>Your Order Invoice</CardTitle>
               <CardDescription>
-                <span className="font-semibold">Note:</span> Be sure to copy
-                your order id and save it, So you will be able to track your
-                order.
+                <span className="font-semibold">Note:</span> Be sure to{" "}
+                <span className="font-bold">
+                  copy your order id and save it
+                </span>
+                , So you will be able to track your order.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -54,7 +56,7 @@ const InvoiceData = (data: any) => {
                 </CardDescription>
               ) : (
                 <CardDescription className="font-bold">
-                  Is Paid : <span className="font-light">Payment</span>
+                  Is Paid : <span className="font-light">Payment Failed</span>
                 </CardDescription>
               )}
               <CardDescription className="font-bold">
