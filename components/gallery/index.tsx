@@ -11,13 +11,11 @@ interface GalleryProps {
   images: Image[];
 }
 
-const Gallery: React.FC<GalleryProps> = ({
-  images = []
-}) => {
-  return ( 
+const Gallery: React.FC<GalleryProps> = ({ images = [] }) => {
+  return (
     <Tab.Group as="div" className="flex flex-col-reverse">
       <div className="mx-auto mt-6 w-full max-w-2xl sm:block lg:max-w-none">
-        <Tab.List className="grid grid-cols-4 gap-6">
+        <Tab.List className="grid grid-cols-5 gap-4 md:gap-6 md:grid-cols-6">
           {images.map((image) => (
             <GalleryTab key={image.id} image={image} />
           ))}
@@ -39,6 +37,6 @@ const Gallery: React.FC<GalleryProps> = ({
       </Tab.Panels>
     </Tab.Group>
   );
-}
- 
+};
+
 export default Gallery;
