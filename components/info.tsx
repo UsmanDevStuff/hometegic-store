@@ -54,13 +54,16 @@ const Info: React.FC<InfoProps> = ({ data }) => {
           <div className="h-6 w-6 rounded-full border border-gray-600" style={{ backgroundColor: data?.color?.value }} />
         </div> */}
           <div className="flex flex-wrap items-center gap-x-3">
-            <Button onClick={buyNow} className="flex items-center gap-x-2 mb-2">
+            <Button
+              onClick={buyNow}
+              className="flex items-center gap-x-2 mb-2 mx-2"
+            >
               Buy Now
               <CreditCard size={20} />
             </Button>
             <Button
               onClick={onAddToCart}
-              className="flex items-center gap-x-2 mb-2"
+              className="flex items-center gap-x-2 mb-2 mx-2"
             >
               Add To Cart
               <ShoppingCart size={20} />

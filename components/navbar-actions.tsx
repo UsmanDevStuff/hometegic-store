@@ -21,18 +21,18 @@ const NavbarActions = () => {
   if (!isMounted) {
     return null;
   }
-
+  //gap-x-3 outer div
   return (
-    <div className="ml-auto flex items-center gap-x-2">
+    <div className="ml-auto flex items-center">
       <Button
         onClick={() => router.push("/track-order")}
-        className="flex items-center rounded-lg bg-black px-[10px] py-[6px]"
+        className="flex items-center rounded-lg bg-black px-[10px] py-[6px] mx-1"
       >
         <CarIcon size={20} color="white" />
       </Button>
       <Button
         onClick={() => router.push("/cart")}
-        className="flex items-center rounded-lg bg-black px-[10px] py-[6px]"
+        className="flex items-center rounded-lg bg-black px-[10px] py-[6px] mx-1"
       >
         <ShoppingBag size={20} color="white" />
         <span className="ml-2 text-sm font-medium text-white">
