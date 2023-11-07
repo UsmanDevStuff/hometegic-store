@@ -6,6 +6,10 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { CrispProvider } from "@/components/crisp-provider";
 
+import { Analytics } from "@vercel/analytics/react";
+
+import NextTopLoader from "nextjs-toploader";
+
 import "./globals.css";
 
 const font = Urbanist({ subsets: ["latin"] });
@@ -24,11 +28,13 @@ export default function RootLayout({
     <html lang="en">
       <CrispProvider />
       <body className={font.className}>
+        <NextTopLoader />
         <ToastProvider />
         <ModalProvider />
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
