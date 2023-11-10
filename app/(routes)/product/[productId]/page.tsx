@@ -35,8 +35,8 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
               <Info data={product} />
             </div>
           </div>
-          <hr className="my-10" />
-          <ProductList title="Related Items" items={suggestedProducts} />
+          {/* <hr className="my-10" />
+          <ProductList title="Related Items" items={suggestedProducts} /> */}
         </div>
       </Container>
     </div>
