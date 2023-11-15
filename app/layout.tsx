@@ -11,6 +11,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 
 import NextTopLoader from "nextjs-toploader";
+import FacebookPixel from "@/components/FacebookPixel";
 
 import "./globals.css";
 
@@ -60,6 +61,7 @@ src="https://www.facebook.com/tr?id=1790395454746495&ev=PageView&noscript=1"
         <Navbar />
         {children}
         <Footer />
+        <FacebookPixel />
         <Analytics />
       </body>
     </html>
