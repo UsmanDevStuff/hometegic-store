@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Script
+      {/* <Script
         id="meta_pixel_code"
         dangerouslySetInnerHTML={{
           __html: `
@@ -52,7 +52,7 @@ src="https://www.facebook.com/tr?id=1790395454746495&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
           `,
         }}
-      />
+      /> */}
       <CrispProvider />
       <body className={font.className}>
         <NextTopLoader />
