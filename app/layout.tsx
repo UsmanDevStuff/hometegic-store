@@ -11,7 +11,6 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 
 import NextTopLoader from "nextjs-toploader";
-import FacebookPixel from "@/components/FacebookPixel";
 
 import "./globals.css";
 
@@ -29,12 +28,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* <Script
+      <Script
         id="meta_pixel_code"
         dangerouslySetInnerHTML={{
           __html: `
           <!-- Meta Pixel Code -->
-<script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -45,14 +43,13 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1790395454746495');
 fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1790395454746495&ev=PageView&noscript=1"
-/></noscript>
 <!-- End Meta Pixel Code -->
           `,
         }}
-      /> */}
+      />
+      <noscript><img height="1" width="1" className="display-none"
+      src="https://www.facebook.com/tr?id=1790395454746495&ev=PageView&noscript=1"
+      /></noscript>
       <CrispProvider />
       <body className={font.className}>
         <NextTopLoader />
@@ -61,7 +58,6 @@ src="https://www.facebook.com/tr?id=1790395454746495&ev=PageView&noscript=1"
         <Navbar />
         {children}
         <Footer />
-        <FacebookPixel />
         <Analytics />
       </body>
     </html>
