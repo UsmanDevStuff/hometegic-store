@@ -8,6 +8,13 @@ import { Product } from "@/types";
 import useCart from "@/hooks/use-cart";
 import axios from "axios";
 
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
+
 interface InfoProps {
   data: Product;
 }
@@ -28,6 +35,8 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         productIds: items.map((item) => item.id),
       }
     );
+
+    window.fbq('track', 'Purchase', {currency: "USD", value: 30.00});
 
     window.location = response.data.url;
   };
