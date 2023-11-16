@@ -28,6 +28,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+     <Script 
+      id="gtm_code"
+      dangerouslySetInnerHTML={
+        {
+          __html:`
+          <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PKPNF4Z4');</script>
+<!-- End Google Tag Manager -->
+          `
+        }
+      }
+     />
+      </head>
       <Script
         id="meta_pixel_code"
         dangerouslySetInnerHTML={{
@@ -47,11 +65,13 @@ fbq('track', 'PageView');
           `,
         }}
       />
-      <noscript><img height="1" width="1" className="display-none"
+      <noscript><img height="1" width="1" className="hidden"
       src="https://www.facebook.com/tr?id=1790395454746495&ev=PageView&noscript=1"
       /></noscript>
       <CrispProvider />
       <body className={font.className}>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKPNF4Z4"
+height="0" width="0" className="hidden"></iframe></noscript>
         <NextTopLoader />
         <ToastProvider />
         <ModalProvider />
