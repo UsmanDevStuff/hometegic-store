@@ -44,7 +44,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       }
      />
-      <Script
+      {/* <Script
         id="meta_pixel_code"
         dangerouslySetInnerHTML={{
           __html: `
@@ -65,7 +65,7 @@ fbq('track', 'PageView');
       />
       <noscript><img height="1" width="1" style={{ display: "none"}}
       src="https://www.facebook.com/tr?id=1790395454746495&ev=PageView&noscript=1"
-      /></noscript>
+      /></noscript> */}
       <CrispProvider />
       <body className={font.className}>
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKPNF4Z4"
