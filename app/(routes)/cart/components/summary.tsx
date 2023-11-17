@@ -34,6 +34,8 @@ const Summary = () => {
       productIds: items.map((item) => item.id)
     });
 
+    window.fbq('track', 'Purchase', {currency: 'USD'});
+
     window.location = response.data.url;
   }
 
