@@ -26,6 +26,8 @@ const Info: React.FC<InfoProps> = ({ data }) => {
 
   const onAddToCart = () => {
     cart.addItem(data);
+
+    window.fbq("track", "AddToCart", {currency: "USD"});
   };
 
   const buyNow = async () => {
@@ -36,7 +38,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       }
     );
 
-    window.fbq('track', 'Purchase', {currency: "USD", value: 30.00});
+    window.fbq('track', 'Purchase', {currency: "USD"});
 
     window.location = response.data.url;
   };
