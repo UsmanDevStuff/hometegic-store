@@ -14,7 +14,6 @@ declare global {
   }
 }
 
-
 interface InfoProps {
   data: Product;
 }
@@ -27,7 +26,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
   const onAddToCart = () => {
     cart.addItem(data);
 
-    window.fbq("track", "AddToCart", {currency: "USD"});
+    window.fbq("track", "AddToCart", { currency: "USD" });
   };
 
   const buyNow = async () => {
@@ -38,7 +37,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       }
     );
 
-    window.fbq('track', 'Purchase', {currency: "USD"});
+    window.fbq("track", "Purchase", { currency: "USD", value: 30 });
 
     window.location = response.data.url;
   };
