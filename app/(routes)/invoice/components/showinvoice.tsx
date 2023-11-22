@@ -103,6 +103,7 @@ const ShowInvoice = (data: any) => {
           <div id="pdf">
             <div>
               <InvoiceData data={orders} id={id} />
+              {window.fbq("trackCustom", "PaymentSuccess")}
               {/* <div className="grid justify-center">
                 {isClient ? (
                   <PDFDownloadLink
@@ -120,7 +121,10 @@ const ShowInvoice = (data: any) => {
           </div>
         ) : null}
         {searchParams.get("canceled") ? (
-          <h1>There is an error with your order and is not processed</h1>
+          <div>
+            {window.fbq("trackCustom", "PaymentFailed")}
+            <h1>There is an error with your order and is not processed</h1>
+          </div>
         ) : null}
       </Container>
     </div>
