@@ -37,7 +37,7 @@ const Summary = () => {
       }
     );
 
-    window.fbq("track", "Purchase", { currency: "USD", value: 30 });
+    window.fbq("track", "InitiateCheckout", { currency: "USD", value: 30 });
 
     window.location = response.data.url;
   };

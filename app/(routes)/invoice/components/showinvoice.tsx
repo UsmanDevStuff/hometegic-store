@@ -103,7 +103,7 @@ const ShowInvoice = (data: any) => {
           <div id="pdf">
             <div>
               <InvoiceData data={orders} id={id} />
-              {window.fbq("trackCustom", "PaymentSuccess")}
+              {window.fbq("track", "Purchase", { currency: "USD", value: 30 })}
               {/* <div className="grid justify-center">
                 {isClient ? (
                   <PDFDownloadLink

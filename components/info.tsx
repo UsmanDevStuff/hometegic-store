@@ -37,7 +37,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       }
     );
 
-    window.fbq("track", "Purchase", { currency: "USD", value: 30 });
+    window.fbq("track", "InitiateCheckout", { currency: "USD", value: 30 });
 
     window.location = response.data.url;
   };
