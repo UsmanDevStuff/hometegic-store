@@ -1,6 +1,8 @@
 import React from "react";
 import Currency from "./ui/currency";
 import { Product } from "@/types";
+import { Truck } from "lucide-react";
+import Image from "next/image";
 
 interface InfoButtonProps {
   data: Product;

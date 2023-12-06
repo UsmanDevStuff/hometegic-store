@@ -7,6 +7,7 @@ import Button from "@/components/ui/button";
 import { Product } from "@/types";
 import useCart from "@/hooks/use-cart";
 import axios from "axios";
+import Image from "next/image";
 
 declare global {
   interface Window {
@@ -26,7 +27,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
   const onAddToCart = () => {
     cart.addItem(data);
 
-    window.fbq("track", "AddToCart", { currency: "USD" });
+    window.fbq("track", "AddToCart");
   };
 
   const buyNow = async () => {
@@ -79,8 +80,19 @@ const Info: React.FC<InfoProps> = ({ data }) => {
               <ShoppingCart size={20} />
             </Button>
           </div>
+          <div className="flex flex-wrap content-center">
+            <Image
+              className="mx-2"
+              src={"/free-shiping.png"}
+              alt="free-shipping"
+              height={35}
+              width={35}
+            />
+            <p className="mt-1 font-semibold">Free Shipping</p>
+          </div>
         </div>
-        <div>
+        <hr />
+        <div className="mt-1">
           <h1 className="text-lg font-bold">Details:</h1>
           <p>{data?.details?.value}</p>
         </div>
